@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.Common", "DarkDhamon.Common\DarkDhamon.Common.csproj", "{496867E9-451C-4029-B25B-E08DE9C69BA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.Common.Tests", "DarkDhamon.Common.Tests\DarkDhamon.Common.Tests.csproj", "{8FCC12F7-976F-4997-9C46-4B7E0021A275}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{496867E9-451C-4029-B25B-E08DE9C69BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496867E9-451C-4029-B25B-E08DE9C69BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496867E9-451C-4029-B25B-E08DE9C69BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496867E9-451C-4029-B25B-E08DE9C69BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7C34B9C-BCA3-4BD3-8BB3-1A7789112FFE}
+	EndGlobalSection
+EndGlobal
