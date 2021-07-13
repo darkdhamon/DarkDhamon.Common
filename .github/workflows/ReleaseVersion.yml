@@ -22,10 +22,10 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
     - name: Push Common
-      run: dotnet nuget push DarkDhamon.Common.${VERSION}.nupkg --source https://nuget.pkg.github.com/darkdhamon/index.json --api-key ${GITHUB_TOKEN}
+      run: dotnet nuget push DarkDhamon.Common.${VERSION}.nupkg --source https://nuget.pkg.github.com/darkdhamon/index.json --api-key ${GITHUB_TOKEN} --skip-duplicate
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Push OS Integration
-      run: dotnet nuget push DarkDhamon.OS.Integration.${VERSION}.nupkg --source https://nuget.pkg.github.com/darkdhamon/index.json --api-key ${GITHUB_TOKEN}
+      run: dotnet nuget push DarkDhamon.OS.Integration.${VERSION}.nupkg --source https://nuget.pkg.github.com/darkdhamon/index.json --api-key ${GITHUB_TOKEN} --skip-duplicate
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
