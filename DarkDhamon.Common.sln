@@ -4,12 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.Common", "DarkDhamon.Common\DarkDhamon.Common.csproj", "{496867E9-451C-4029-B25B-E08DE9C69BA1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18} = {1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.Common.Tests", "DarkDhamon.Common.Tests\DarkDhamon.Common.Tests.csproj", "{8FCC12F7-976F-4997-9C46-4B7E0021A275}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.OS.Integration", "DarkDhamon.OS.Integration\DarkDhamon.OS.Integration.csproj", "{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.OS.Integration.Tests", "DarkDhamon.OS.Integration.Tests\DarkDhamon.OS.Integration.Tests.csproj", "{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.OS.Integration.Tests", "DarkDhamon.OS.Integration.Tests\DarkDhamon.OS.Integration.Tests.csproj", "{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{E019CFCA-C127-48D4-B6F3-008A029995F4}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
