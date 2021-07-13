@@ -1,5 +1,7 @@
+using System;
 using System.Linq;
 using DarkDhamon.Common.Tests.AbstractTest;
+using DarkDhamon.OS.Integration.Windows;
 using DarkDhamon.OS.Integration.Windows.Threads;
 using Microsoft.Extensions.Logging;
 using NUnit.Framework;
@@ -8,15 +10,29 @@ namespace DarkDhamon.OS.Integration.Tests.Windows.Threads
 {
     public class WindowsAppExecutionStateTests : AbstractTestsClass<WindowsAppExecutionStateTests>
     {
+        public bool IsTestSystemWindows { get; set; }
+
+        [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            IsTestSystemWindows = Verify.IsWindows();
+        }
         [SetUp]
         public void Setup()
         {
-            AppExecutionState.Clear();
+            if (IsTestSystemWindows)
+            {
+                AppExecutionState.Clear();
+            }
         }
 
         [Test]
         public void ClearTests()
         {
+            if (!IsTestSystemWindows)
+            {
+                Assert.Ignore("Test System is not windows");
+            }
             void Code()
             {
                 AppExecutionState.Clear(Logger);
@@ -36,6 +52,10 @@ namespace DarkDhamon.OS.Integration.Tests.Windows.Threads
         [TestCase(ExecutionState.DisplayRequired | ExecutionState.SystemRequired | ExecutionState.Continuous)]
         public void SetTests(ExecutionState state)
         {
+            if (!IsTestSystemWindows)
+            {
+                Assert.Ignore("Test System is not windows");
+            }
             void Code()
             {
                 AppExecutionState.Set(state, Logger);
@@ -60,6 +80,10 @@ namespace DarkDhamon.OS.Integration.Tests.Windows.Threads
         [TestCase(ExecutionState.DisplayRequired | ExecutionState.SystemRequired | ExecutionState.Continuous)]
         public void SetContinuousTests(ExecutionState state)
         {
+            if (!IsTestSystemWindows)
+            {
+                Assert.Ignore("Test System is not windows");
+            }
             void Code()
             {
                 AppExecutionState.SetContinuous(state, Logger);

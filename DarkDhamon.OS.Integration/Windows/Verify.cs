@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DarkDhamon.OS.Integration.Windows
 {
-    internal static class Verify
+    public static class Verify
     {
         public static bool IsWindows()
         {

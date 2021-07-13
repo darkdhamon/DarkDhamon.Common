@@ -19,10 +19,14 @@ namespace DarkDhamon.OS.Integration.Tests.Windows
         [OneTimeSetUp]
         public void OneTimeSetup()
         {
+            IsTestSystemWindows = Verify.IsWindows();
+            if(!IsTestSystemWindows)return;
             ScreenSaverControl = new WinScreenSaverControl(Logger);
             ScreenSaverControlNoLogging = new WinScreenSaverControl();
         }
-        
+
+        public bool IsTestSystemWindows { get; set; }
+
         [SetUp]
         public void Setup()
         {
@@ -32,6 +36,10 @@ namespace DarkDhamon.OS.Integration.Tests.Windows
         [Test]
         public void NoLoggingTest()
         {
+            if (!IsTestSystemWindows)
+            {
+                Assert.Ignore("Test System is not windows");
+            }
             void Code()
             {
                 ScreenSaverControlNoLogging.EnableScreenSaver();
@@ -43,6 +51,10 @@ namespace DarkDhamon.OS.Integration.Tests.Windows
         [Test]
         public void EnableScreenSaver()
         {
+            if (!IsTestSystemWindows)
+            {
+                Assert.Ignore("Test System is not windows");
+            }
             void Code()
             {
                 ScreenSaverControl.EnableScreenSaver();
@@ -54,6 +66,10 @@ namespace DarkDhamon.OS.Integration.Tests.Windows
         [Test]
         public void DisableScreenSaver()
         {
+            if (!IsTestSystemWindows)
+            {
+                Assert.Ignore("Test System is not windows");
+            }
             void Code()
             {
                 ScreenSaverControl.DisableScreenSaver();
