@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.Common", "DarkDhamon.Common\DarkDhamon.Common.csproj", "{496867E9-451C-4029-B25B-E08DE9C69BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.Common", "DarkDhamon.Common\DarkDhamon.Common.csproj", "{496867E9-451C-4029-B25B-E08DE9C69BA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.Common.Tests", "DarkDhamon.Common.Tests\DarkDhamon.Common.Tests.csproj", "{8FCC12F7-976F-4997-9C46-4B7E0021A275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.Common.Tests", "DarkDhamon.Common.Tests\DarkDhamon.Common.Tests.csproj", "{8FCC12F7-976F-4997-9C46-4B7E0021A275}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.OS.Integration", "DarkDhamon.OS.Integration\DarkDhamon.OS.Integration.csproj", "{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.OS.Integration.Tests", "DarkDhamon.OS.Integration.Tests\DarkDhamon.OS.Integration.Tests.csproj", "{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FCC12F7-976F-4997-9C46-4B7E0021A275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E50C75E-D671-4EF4-8B77-1BD6A93FBB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7128EE-2196-4692-8F29-CEDFBE55EFCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
