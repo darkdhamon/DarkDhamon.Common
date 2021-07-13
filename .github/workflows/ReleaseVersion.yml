@@ -1,4 +1,4 @@
-name: .NET
+name: Create Release Packages
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
     - name: Test
       run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
     - name: Pack
-      run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
+      run: dotnet pack SOLUTION --configuration Release /p:Version=${VERSION} --no-build --output .
     - name: Push
       run: dotnet nuget push DarkDhamon.Common.${VERSION}.nupkg --source https://nuget.pkg.github.com/darkdhamon/index.json --api-key ${GITHUB_TOKEN}
       env:
