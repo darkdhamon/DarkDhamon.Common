@@ -18,7 +18,6 @@ namespace DarkDhamon.Common.DataRepository
         {
             return Context.Set<TEntity>();
         }
-
         public TEntity Get(TKey entityId)
         {
             return Context.Find<TEntity>(entityId);
@@ -42,11 +41,11 @@ namespace DarkDhamon.Common.DataRepository
             Context.SaveChanges();
         }
     }
-    public abstract class EFBaseRepository<TContext, TEntity> : EfBaseRepository<TContext, TEntity, int>
+    public abstract class EfBaseRepository<TContext, TEntity> : EfBaseRepository<TContext, TEntity, int>
         where TContext : DbContext
         where TEntity : class, IEntity<int>
     {
-        protected EFBaseRepository(TContext context) : base(context)
+        protected EfBaseRepository(TContext context) : base(context)
         {
         }
     }
