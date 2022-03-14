@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace DarkDhamon.Common.API.Models
+﻿namespace DarkDhamon.Common.API.Models
 {
     public class ApiResponse
     {

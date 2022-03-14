@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
+﻿using System.Linq;
 
 namespace DarkDhamon.Common.DataRepository
 {
@@ -18,4 +14,11 @@ namespace DarkDhamon.Common.DataRepository
         void Update(TEntity entity);
         void Delete(TEntity entity);
     }
+
+    public interface IRepository<TEntity>:IRepository<TEntity, int>
+        where TEntity : class, IEntity<int>
+    {
+
+    }
+        
 }
