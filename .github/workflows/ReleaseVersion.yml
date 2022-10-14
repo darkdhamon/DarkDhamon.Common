@@ -6,7 +6,7 @@ on:
       version:
         description: 'Version of NuGet Package'
         required: true
-        default: ${{date +'%Y-%m-%d')}
+        default: ${{date +'%Y-%m-%d'}
 jobs:
   build:
     runs-on: ubuntu-latest
