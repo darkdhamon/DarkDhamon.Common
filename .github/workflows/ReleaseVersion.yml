@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: Generate Version number
       id: version
-      run: echo "::set-output name=version::$(date +'%Y.%m.%d')"
+      run: echo "::set-output name=version::$(version +'%Y.%m.%d')"
     - name: Checkout
       uses: actions/checkout@v2
     - name: Set VERSION variable from tag
