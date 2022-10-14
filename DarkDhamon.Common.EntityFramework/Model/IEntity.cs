@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DarkDhamon.Common.DataRepository
+namespace DarkDhamon.Common.EntityFramework.Model
 {
     public interface IEntity<TKey> where TKey : struct
     {

@@ -1,7 +1,7 @@
-﻿using System.Linq;
+﻿using DarkDhamon.Common.EntityFramework.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace DarkDhamon.Common.DataRepository
+namespace DarkDhamon.Common.EntityFramework.DataRepository
 {
     public abstract class EfBaseRepository<TContext, TEntity, TKey> : IRepository<TEntity, TKey>
         where TContext : DbContext
@@ -18,7 +18,7 @@ namespace DarkDhamon.Common.DataRepository
         {
             return Context.Set<TEntity>();
         }
-        public TEntity Get(TKey entityId)
+        public TEntity? Get(TKey entityId)
         {
             return Context.Find<TEntity>(entityId);
         }
