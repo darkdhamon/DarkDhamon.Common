@@ -1,6 +1,4 @@
-﻿using DarkDhamon.Common.EntityFramework.DataRepository;
-
-namespace DarkDhamon.Common.EntityFramework.Model
+﻿namespace DarkDhamon.Common.EntityFramework.Model
 {
 
     public interface ITrackedEntity<TKey, TUser>

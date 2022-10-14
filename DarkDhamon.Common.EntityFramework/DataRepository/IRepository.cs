@@ -1,13 +1,15 @@
-﻿namespace DarkDhamon.Common.EntityFramework.DataRepository
+﻿using DarkDhamon.Common.EntityFramework.Model;
+
+namespace DarkDhamon.Common.EntityFramework.DataRepository
 {
-    
+
 
     public interface IRepository<TEntity,TKey> 
         where TEntity:class, IEntity<TKey>
         where TKey:struct
     {
         IQueryable<TEntity> All();
-        TEntity Get(TKey entityId);
+        TEntity? Get(TKey entityId);
         void Add(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);

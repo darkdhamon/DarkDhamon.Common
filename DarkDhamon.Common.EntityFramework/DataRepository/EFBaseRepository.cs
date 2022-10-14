@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DarkDhamon.Common.EntityFramework.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace DarkDhamon.Common.EntityFramework.DataRepository
 {
@@ -17,7 +18,7 @@ namespace DarkDhamon.Common.EntityFramework.DataRepository
         {
             return Context.Set<TEntity>();
         }
-        public TEntity Get(TKey entityId)
+        public TEntity? Get(TKey entityId)
         {
             return Context.Find<TEntity>(entityId);
         }
