@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<PackageId>DarkDhamon.Common</PackageId>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/darkdhamon/DarkDhamon.Common</RepositoryUrl>
+	</PropertyGroup>
 </Project>
