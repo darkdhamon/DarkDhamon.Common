@@ -1,12 +1,12 @@
-﻿using System;
+﻿using DarkDhamon.Common.EntityFramework.DataRepository;
 
-namespace DarkDhamon.Common.DataRepository
+namespace DarkDhamon.Common.EntityFramework.Model
 {
 
-    public interface ITrackedEntity<TKey,TUser> 
+    public interface ITrackedEntity<TKey, TUser>
         : IEntity<TKey>
-        where TKey:struct
-        where TUser: class
+        where TKey : struct
+        where TUser : class
     {
         DateTime Created { get; set; }
         DateTime? Updated { get; set; }

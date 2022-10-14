@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace DarkDhamon.Common.DataRepository
+﻿namespace DarkDhamon.Common.EntityFramework.DataRepository
 {
     
 

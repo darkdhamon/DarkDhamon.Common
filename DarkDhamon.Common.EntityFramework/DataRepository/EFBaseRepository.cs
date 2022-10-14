@@ -1,7 +1,6 @@
-﻿using System.Linq;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace DarkDhamon.Common.DataRepository
+namespace DarkDhamon.Common.EntityFramework.DataRepository
 {
     public abstract class EfBaseRepository<TContext, TEntity, TKey> : IRepository<TEntity, TKey>
         where TContext : DbContext
