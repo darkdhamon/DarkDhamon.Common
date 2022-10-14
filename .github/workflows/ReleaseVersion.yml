@@ -13,12 +13,12 @@ jobs:
     timeout-minutes: 15
     steps:
     - name: Generate Version number
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y.%m.%d')"
+      id: version
+      run: echo "::set-output name=version::$(date +'%Y.%m.%d').BUILD_NUMBER"
     - name: Checkout
       uses: actions/checkout@v2
     - name: Set VERSION variable from tag
-      run: echo "VERSION=${{ steps.date.outputs.date }}-${{github.event.inputs.version}}" >> $GITHUB_ENV
+      run: echo "VERSION=${{ steps.date.outputs.version }}-${{github.event.inputs.version}}" >> $GITHUB_ENV
     - name: Build
       run: dotnet build --configuration Release /p:Version=${VERSION}
     - name: Test
