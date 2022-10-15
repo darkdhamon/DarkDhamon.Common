@@ -46,5 +46,29 @@
         {
             return value.IsNullOrWhitespace() ? string.Empty : $"{value} ";
         }
+
+        /// <summary>
+        /// Combine the string values of a list into a comma separated string, alias of Join&lt;T&gt;(this IEnumerable&lt;T&gt; valueList, string separator = ", ")
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="valueList"></param>
+        /// <param name="separator"></param>
+        /// <returns></returns>
+        public static string ToString<T>(this IEnumerable<T> valueList, string separator = ", ")
+        {
+            return valueList.Join(separator);
+        }
+
+        /// <summary>
+        /// Combine the string values of a list into a comma separated string
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="valueList"></param>
+        /// <param name="separator"></param>
+        /// <returns></returns>
+        public static string Join<T>(this IEnumerable<T> valueList, string separator = ", ")
+        {
+            return string.Join(separator, valueList);
+        }
     }
 }
