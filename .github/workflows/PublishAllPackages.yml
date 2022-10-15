@@ -1,4 +1,4 @@
-name: Create Release Packages
+name: Publish All Packages
 
 on:
   workflow_dispatch:

@@ -1,0 +1,31 @@
+name: Publish DarkDhamon.Common.EF
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version of NuGet Package'
+        required: true
+        default: "release"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Generate Version number
+      id: date
+      run: echo "::set-output name=date::$(date +'%Y.%m.%d')"
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Set VERSION variable from tag
+      run: echo "VERSION=${{ steps.date.outputs.date }}.$GITHUB_RUN_NUMBER-${{github.event.inputs.version}}" >> $GITHUB_ENV
+    - name: Build
+      run: dotnet build --configuration Release /p:Version=${VERSION}
+    - name: Test
+      run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
+    - name: Pack
+      run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
+    - name: Push Common.EntityFramework Integration
+      run: dotnet nuget push DarkDhamon.Common.EntityFramework.${VERSION}.nupkg --source https://nuget.pkg.github.com/darkdhamon/index.json --api-key ${GITHUB_TOKEN} --skip-duplicate
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
