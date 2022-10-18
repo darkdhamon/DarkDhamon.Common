@@ -54,7 +54,7 @@
         /// <param name="valueList"></param>
         /// <param name="separator"></param>
         /// <returns></returns>
-        public static string ToString<T>(this IEnumerable<T> valueList, string separator = ", ")
+        public static string ToString<T>(this IEnumerable<T> valueList, string separator)
         {
             return valueList.Join(separator);
         }
