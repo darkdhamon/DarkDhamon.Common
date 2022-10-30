@@ -4,6 +4,22 @@ In 2021, I decided to start creating a library of code of shortcuts and code str
 ## Features
 
 ### DarkDhamon.Common
+#### Api Response Models
+_Class ApiResponse_
+
+This model can be used to return a message.
+
+_Class ApiResponse&lt;T&gt;_
+
+This model can return an object defined by the Generic Type Parameter in addition to a Message
+
+_Class PagedApiResponse&lt;T&gt;_
+
+This model can return a list of paginated objects as well as information regarding the page details.
+#### Extension Methods
+##### Enum
+##### String
+
 
 ### DarkDhamon.Common.EntityFramework
 
