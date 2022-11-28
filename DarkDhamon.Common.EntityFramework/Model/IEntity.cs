@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DarkDhamon.Common.EntityFramework.Model
+namespace DarkDhamon.Common.EntityFramework.Model;
+
+public interface IEntity<TKey> 
+    where TKey : struct
 {
-    public interface IEntity<TKey> where TKey : struct
-    {
-        [Key]
-        TKey Id { get; set; }
-    }
+    [Key]
+    TKey Id { get; set; }
 }
