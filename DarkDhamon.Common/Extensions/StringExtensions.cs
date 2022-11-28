@@ -17,7 +17,7 @@
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static bool IsNullOrWhitespace(this string value)
+        public static bool IsNullOrWhitespace(this string? value)
         {
             return string.IsNullOrWhiteSpace(value);
         }
@@ -28,7 +28,7 @@
         /// <param name="value"></param>
         /// <param name="alternateValue"></param>
         /// <returns></returns>
-        public static string IfNullOrWhitespace(this string value, string alternateValue)
+        public static string IfNullOrWhitespace(this string? value, string alternateValue)
         {
             return !string.IsNullOrWhiteSpace(value)
                 ?value
@@ -42,7 +42,7 @@
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string AddSpaceAfter(this string value)
+        public static string AddSpaceAfter(this string? value)
         {
             return value.IsNullOrWhitespace() ? string.Empty : $"{value} ";
         }
