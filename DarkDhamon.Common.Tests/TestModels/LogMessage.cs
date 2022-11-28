@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 
-namespace DarkDhamon.Common.Tests.AbstractTest
+namespace DarkDhamon.Common.Tests.TestModels
 {
     public class LogMessage
     {

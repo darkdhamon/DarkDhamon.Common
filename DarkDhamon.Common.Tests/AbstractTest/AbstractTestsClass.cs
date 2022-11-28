@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Threading.Tasks;
+using DarkDhamon.Common.Tests.TestModels;
 using NUnit.Framework;
 
 namespace DarkDhamon.Common.Tests.AbstractTest
