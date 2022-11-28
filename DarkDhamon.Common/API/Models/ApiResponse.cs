@@ -1,12 +1,22 @@
-﻿namespace DarkDhamon.Common.API.Models
+﻿namespace DarkDhamon.Common.API.Models;
+
+public class ApiResponse
 {
-    public class ApiResponse
+    public int RequestId { get; set; }
+    public string? Message { get; set; }
+
+    public ApiResponse()
     {
-        public string? Message { get; set; }
+        
     }
 
-    public class ApiResponse<T>:ApiResponse
+    public ApiResponse(ApiRequest apiRequest)
     {
-        public T? Data { get; set; }
+        For(apiRequest);
+    }
+
+    public void For(ApiRequest apiRequest)
+    {
+        RequestId = apiRequest.RequestId;
     }
 }
