@@ -18,6 +18,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.Common.EntityFra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.Common", "DarkDhamon.Common\DarkDhamon.Common.csproj", "{283C3757-D692-4845-885E-31E4DAC435B8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{787432E5-3C2D-4A67-817C-EE283A0C6F91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTesting", "UnitTesting", "{1E8D9776-7FB2-428A-B165-F99A646ED04C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{FFF16832-C364-4B23-AE85-7DE518CF729C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +53,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8FCC12F7-976F-4997-9C46-4B7E0021A275} = {787432E5-3C2D-4A67-817C-EE283A0C6F91}
+		{EA7128EE-2196-4692-8F29-CEDFBE55EFCE} = {787432E5-3C2D-4A67-817C-EE283A0C6F91}
+		{1E8D9776-7FB2-428A-B165-F99A646ED04C} = {787432E5-3C2D-4A67-817C-EE283A0C6F91}
+		{FFF16832-C364-4B23-AE85-7DE518CF729C} = {787432E5-3C2D-4A67-817C-EE283A0C6F91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7C34B9C-BCA3-4BD3-8BB3-1A7789112FFE}
