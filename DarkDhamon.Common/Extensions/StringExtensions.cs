@@ -7,7 +7,7 @@ public static class StringExtensions
     /// </summary>
     /// <param name="value"></param>
     /// <returns></returns>
-    public static bool IsNullOrEmpty(this string value)
+    public static bool IsNullOrEmpty(this string? value)
     {
         return string.IsNullOrEmpty(value);
     }

@@ -24,7 +24,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTesting", "UnitTesting"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserTesting", "UserTesting", "{FFF16832-C364-4B23-AE85-7DE518CF729C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.RazorEmailTemplate", "DarkDhamon.RazorEmailTemplate\DarkDhamon.RazorEmailTemplate.csproj", "{F61842F2-7DB1-44F1-80B6-3178E9B87BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkDhamon.RazorEmailTemplate", "DarkDhamon.RazorEmailTemplate\DarkDhamon.RazorEmailTemplate.csproj", "{F61842F2-7DB1-44F1-80B6-3178E9B87BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkDhamon.Common.IO", "DarkDhamon.Common.IO\DarkDhamon.Common.IO.csproj", "{0261EECA-C577-48F0-AD5D-FD0770337610}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{F61842F2-7DB1-44F1-80B6-3178E9B87BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F61842F2-7DB1-44F1-80B6-3178E9B87BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F61842F2-7DB1-44F1-80B6-3178E9B87BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0261EECA-C577-48F0-AD5D-FD0770337610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0261EECA-C577-48F0-AD5D-FD0770337610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0261EECA-C577-48F0-AD5D-FD0770337610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0261EECA-C577-48F0-AD5D-FD0770337610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
