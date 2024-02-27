@@ -1,5 +1,6 @@
 ﻿using DarkDhamon.Common.EntityFramework.Model;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace DarkDhamon.Common.EntityFramework.DataRepository
 {
@@ -14,7 +15,7 @@ namespace DarkDhamon.Common.EntityFramework.DataRepository
         {
             Context = context;
         }
-        public IQueryable<TEntity> All()
+        public virtual IQueryable<TEntity> All()
         {
             return Context.Set<TEntity>();
         }
@@ -35,12 +36,13 @@ namespace DarkDhamon.Common.EntityFramework.DataRepository
             Context.SaveChanges();
         }
 
-        public void Delete(TEntity entity)
+        public virtual void Delete(TEntity entity)
         {
             Context.Remove(entity);
             Context.SaveChanges();
         }
     }
+    
     public abstract class EfBaseRepository<TContext, TEntity> : EfBaseRepository<TContext, TEntity, int>
         where TContext : DbContext
         where TEntity : class, IEntity<int>
